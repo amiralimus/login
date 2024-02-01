@@ -2,23 +2,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
-class Txfi extends StatelessWidget {
+class Txfi2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-    Padding(
-    padding: EdgeInsets.all(8),
-    child:
-   Text(
+      Padding(
+        padding: EdgeInsets.all(8),
+        child:
+        Text(
           'LOG IN',
           style: TextStyle(
             color: Colors.white,
             fontSize: 35.0,
           ),
         ),
-    ),
+      ),
       Text(
-        'amirali',
+        'enter your name',
         style: TextStyle(
           color: Colors.white,
           fontSize: 12,
@@ -33,10 +33,10 @@ class Txfi extends StatelessWidget {
             fontWeight: FontWeight.bold, // وزن متن
           ),
           decoration: InputDecoration(
-            labelText: 'Enter your email',
+            labelText: 'First name',
             border: OutlineInputBorder(
               borderSide:
-                  BorderSide(color: Colors.white, width: 2), // استایل حاشیه
+              BorderSide(color: Colors.white, width: 2), // استایل حاشیه
             ),
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
@@ -56,7 +56,7 @@ class Txfi extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
           decoration: InputDecoration(
-            labelText: 'enter passvord',
+            labelText: 'Last name (optional)',
             border: OutlineInputBorder(
               borderSide: BorderSide(
                 color: Colors.white,

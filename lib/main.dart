@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/pg.dart';
 import 'package:loginpage/textfiledst.dart';
 
 import 'enter.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '',
+      title: 'amirali',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -47,13 +48,32 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       body:
-
-      Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-
-
+      Center(
+        child: Container(
+          width:500,
+          height: 500,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.white, width: 0.8),
+            borderRadius: BorderRadius.circular(10), // برای گوشه‌های گرد
+          ),
+          child:
+        Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        
           Txfi(),
-        Ent()
-      ]),
-    );
+        
+          Ent(),
+          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+            Padding(
+                padding: EdgeInsets.all(28.0),
+                child: Text('forgot email or passvord?',
+                    style: TextStyle(
+                      color: Colors.deepPurpleAccent,
+                      fontSize: 12,
+                    ))),
+          ]),
+        ]),
+            ),
+      ),
+        );
   }
 }
