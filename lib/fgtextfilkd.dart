@@ -1,16 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
-class Txfi2 extends StatelessWidget {
+class Fgtxfi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
       Padding(
         padding: EdgeInsets.all(8),
-        child:
-        Text(
-          'LOG IN',
+        child: Text(
+          'forgot email or passvord',
           style: TextStyle(
             color: Colors.white,
             fontSize: 35.0,
@@ -18,7 +16,7 @@ class Txfi2 extends StatelessWidget {
         ),
       ),
       Text(
-        'enter your name',
+        'we send  a security to eour phon number enter the cod in text fild',
         style: TextStyle(
           color: Colors.white,
           fontSize: 12,
@@ -32,11 +30,13 @@ class Txfi2 extends StatelessWidget {
             fontSize: 20.0, // اندازه متن
             fontWeight: FontWeight.bold, // وزن متن
           ),
+          maxLines: 1, // تعیین حداکثر تعداد خطوط
+          maxLength: 11,
           decoration: InputDecoration(
-            labelText: 'First name',
+            labelText: 'phone number',
             border: OutlineInputBorder(
               borderSide:
-              BorderSide(color: Colors.white, width: 2), // استایل حاشیه
+                  BorderSide(color: Colors.white, width: 2), // استایل حاشیه
             ),
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
@@ -49,14 +49,15 @@ class Txfi2 extends StatelessWidget {
       Padding(
         padding: EdgeInsets.all(30),
         child: TextField(
-
           style: TextStyle(
             color: Colors.white, // رنگ متن
             fontSize: 20.0, // اندازه متن
             fontWeight: FontWeight.bold,
           ),
+          maxLines: 1, // تعیین حداکثر تعداد خطوط
+          maxLength: 6,
           decoration: InputDecoration(
-            labelText: 'Last name (optional)',
+            labelText: 'security cod',
             border: OutlineInputBorder(
               borderSide: BorderSide(
                 color: Colors.white,
@@ -69,6 +70,8 @@ class Txfi2 extends StatelessWidget {
           ),
         ),
       ),
+
+
     ]);
   }
 }

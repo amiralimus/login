@@ -25,13 +25,15 @@ class Txfi extends StatelessWidget {
         ),
       ),
       Padding(
-        padding: EdgeInsets.all(30),
+        padding: EdgeInsets.all(20),
         child: TextField(
           style: TextStyle(
             color: Colors.white, // رنگ متن
             fontSize: 20.0, // اندازه متن
             fontWeight: FontWeight.bold, // وزن متن
           ),
+          maxLines: 1, // تعیین حداکثر تعداد خطوط
+          maxLength: 25, //
           decoration: InputDecoration(
             labelText: 'Enter your email',
             border: OutlineInputBorder(
@@ -47,7 +49,7 @@ class Txfi extends StatelessWidget {
         ),
       ),
       Padding(
-        padding: EdgeInsets.all(30),
+        padding: EdgeInsets.all(20),
         child: TextField(
           obscureText: true,
           style: TextStyle(
@@ -55,6 +57,8 @@ class Txfi extends StatelessWidget {
             fontSize: 20.0, // اندازه متن
             fontWeight: FontWeight.bold,
           ),
+          maxLines: 1, // تعیین حداکثر تعداد خطوط
+          maxLength: 10, // تعیین حداکثر تعداد کاراکتر
           decoration: InputDecoration(
             labelText: 'enter passvord',
             border: OutlineInputBorder(
@@ -69,6 +73,127 @@ class Txfi extends StatelessWidget {
           ),
         ),
       ),
+    ]);
+  }
+}
+class Txfi3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Padding(
+        padding: EdgeInsets.all(8),
+        child:
+        Text(
+          'Log In',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 35.0,
+          ),
+        ),
+      ),
+      Text(
+        'Enter your birthday and gende',
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 13,
+        ),
+      ),
+
+
+
+
+     Padding(
+       padding: EdgeInsets.all(28),
+       child: TextField(
+         style: TextStyle(
+           color: Colors.white, // رنگ متن
+           fontSize: 20.0, // اندازه متن
+           fontWeight: FontWeight.bold, // وزن متن
+         ),
+         decoration: InputDecoration(
+           labelText: 'month',
+           border: OutlineInputBorder(
+             borderSide:
+             BorderSide(color: Colors.white, width: 2), // استایل حاشیه
+           ),
+           focusedBorder: OutlineInputBorder(
+             borderSide: BorderSide(
+                 color: Colors.white24,
+                 width: 2), // استایل حاشیه وقتی فیلد فوکوس شده است
+           ),
+         ),
+       ),
+     ),
+     Padding(
+       padding: EdgeInsets.all(28),
+       child: TextField(
+         style: TextStyle(
+           color: Colors.white, // رنگ متن
+           fontSize: 20.0, // اندازه متن
+           fontWeight: FontWeight.bold, // وزن متن
+         ),
+         decoration: InputDecoration(
+           labelText: 'day',
+           border: OutlineInputBorder(
+             borderSide:
+             BorderSide(color: Colors.white, width: 2), // استایل حاشیه
+           ),
+           focusedBorder: OutlineInputBorder(
+             borderSide: BorderSide(
+                 color: Colors.white24,
+                 width: 2), // استایل حاشیه وقتی فیلد فوکوس شده است
+           ),
+         ),
+       ),
+     ),
+     Padding(
+       padding: EdgeInsets.all(28),
+       child: TextField(
+         style: TextStyle(
+           color: Colors.white, // رنگ متن
+           fontSize: 20.0, // اندازه متن
+           fontWeight: FontWeight.bold, // وزن متن
+         ),
+         decoration: InputDecoration(
+           labelText: 'year',
+           border: OutlineInputBorder(
+             borderSide:
+             BorderSide(color: Colors.white, width: 2), // استایل حاشیه
+           ),
+           focusedBorder: OutlineInputBorder(
+             borderSide: BorderSide(
+                 color: Colors.white24,
+                 width: 2), // استایل حاشیه وقتی فیلد فوکوس شده است
+           ),
+         ),
+       ),
+     ),
+      Padding(
+        padding: EdgeInsets.all(20),
+        child: TextField(
+          style: TextStyle(
+            color: Colors.white, // رنگ متن
+            fontSize: 20.0, // اندازه متن
+            fontWeight: FontWeight.bold, // وزن متن
+          ),
+          decoration: InputDecoration(
+            labelText: 'gender',
+            border: OutlineInputBorder(
+              borderSide:
+              BorderSide(color: Colors.white, width: 2), // استایل حاشیه
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Colors.white24,
+                  width: 2), // استایل حاشیه وقتی فیلد فوکوس شده است
+            ),
+          ),
+        ),
+      ),
+
+
+
+
     ]);
   }
 }

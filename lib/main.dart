@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/page3.dart';
 import 'package:loginpage/pg.dart';
 import 'package:loginpage/textfiledst.dart';
 
 import 'enter.dart';
+import 'forgat.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,33 +49,39 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body:
-      Center(
+      body: Center(
         child: Container(
-          width:500,
+          width: 500,
           height: 500,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.white, width: 0.8),
             borderRadius: BorderRadius.circular(10), // برای گوشه‌های گرد
           ),
-          child:
-        Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        
-          Txfi(),
-        
-          Ent(),
-          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-            Padding(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Txfi(),
+            Ent(),
+            Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+              Padding(
                 padding: EdgeInsets.all(28.0),
-                child: Text('forgot email or passvord?',
-                    style: TextStyle(
-                      color: Colors.deepPurpleAccent,
-                      fontSize: 12,
-                    ))),
+                child: InkWell(
+                    child: Text('forgot email or passvord?',
+                        style: TextStyle(
+                          color: Colors.deepPurpleAccent,
+                          fontSize: 12,
+                        )),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Forgot(),
+                        ),
+                      );
+                    }),
+              ),
+            ]),
           ]),
-        ]),
-            ),
+        ),
       ),
-        );
+    );
   }
 }
